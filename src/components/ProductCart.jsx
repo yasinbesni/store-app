@@ -1,6 +1,7 @@
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, IconButton, Typography } from "@mui/material";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import { formatPrice } from "../utils/format";
 
 
 
@@ -25,7 +26,7 @@ export default function ProductCart({ product }) {
                 {product.title}
                 </Typography>
                 <Typography variant="body1" color="secondary.dark">
-                    {product.price}
+                    {formatPrice.format(product.price)}
                 </Typography>
                 <CardActions sx={{ display: "flex",justifyContent:"space-between"}}>
                     <IconButton>
