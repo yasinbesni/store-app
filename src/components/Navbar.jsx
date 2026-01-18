@@ -14,6 +14,10 @@ const authLinks = [
     { title: "Login", to: "/login" },
     { title: "Register", to: "/register" },
 ]
+let badgeContent = -5;
+if (badgeContent < 0) {
+    badgeContent = 0;
+}
 export default function Navbar() { 
 
     return <AppBar position="static" sx={{backgroundColor:"secondary.light"}}>
@@ -36,6 +40,7 @@ export default function Navbar() {
                         {link.title}
                     </Button>
                 ))}
+                
             </Box>
             <Box sx={{display:"flex",alignItems:"center",}}>
                 <IconButton color="inherit"
@@ -43,7 +48,9 @@ export default function Navbar() {
                         to='/cart'
                         size='large'
                         edge="start">
-                    <Badge badgeContent={'5'} color="secondary"                    
+                    <Badge badgeContent={badgeContent}
+                        color="secondary"
+                        showZero={false}
                     >
                         <LocalMallIcon />
                     </Badge>

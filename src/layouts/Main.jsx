@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import ButtonUsage from "./components/ButtonUsage";
-import Navbar from "./components/Navbar";
+import ButtonUsage from "../components/ButtonUsage";
+import Navbar from "../components/Navbar";
 import { Container } from "@mui/material";
 
 export default function MainLayout() { 
